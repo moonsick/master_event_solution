@@ -1,0 +1,113 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--dash;&gt;
+<html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>행사관리 솔루션(관리자)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+		minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <link rel="stylesheet" href="src/common/style/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/common/style/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="src/common/style/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="src/common/style/css/manager_login.css" />
+
+    <!--<link rel="stylesheet" href="src/common/style/css/r-main.css" />-->
+
+
+</head>
+
+<!--모듈 명은 ng-app 으로 명시-->
+<!-- 컨트롤러 명은 ng-controller 로 명시-->
+<!--루트 모듈이자 루트 컨트롤러로 MainCrtrl 은 아래쪽에 링크하였음-->
+
+<body ng-app="eventApp" ng-controller="MainCtrl">
+
+
+<div ng-if="!layout">
+    <div ng-include="'src/app/html/150_00_manager_login/150_00_manager_login.html'"></div>
+</div>
+
+
+<div ng-if="layout">
+    <div ng-include="'src/app/html/header-m.html'"></div>
+    <!--<div class="container">-->
+    <div>
+        <div ng-view=""></div>
+    </div>
+    <div ng-include="'src/app/html/footer-m.html'"></div>
+</div>
+
+
+
+<!-- build:js(app) scripts/vendor.js -->
+<!-- bower:js -->
+
+
+<script src="vendor/es5-shim/es5-shim.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/json3/lib/json3.min.js"></script>
+<script src="vendor/angular-resource/angular-resource.js"></script>
+<script src="vendor/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/angular-route/angular-route.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!--<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>-->
+
+
+<script src="vendor/services/angular-file-upload.min.js"></script>
+<script src="vendor/services/angular-file-upload-shim.js"></script>
+
+
+<script src="src/common/directives/app.js"></script>
+<script src="src/common/directives/dbConnectService.js"></script>
+<script src="src/common/directives/main.js"></script>
+
+
+
+<script src="src/app/html/footer-m.js"></script>
+<script src="src/app/html/header-m.js"></script>
+<script src="src/app/html/110_00_event_register/110_00_event_register.js"></script>
+<script src="src/app/html/110_00_event_register/110_01_event_register_mod.js"></script>
+<script src="src/app/html/110_00_event_register/110_02_event_register_insert.js"></script>
+
+<script src="src/app/html/120_00_info_register/120_00_info_register.js"></script>
+<script src="src/app/html/120_00_info_register/120_01_info_register_schedule_mod.js"></script>
+<script src="src/app/html/120_00_info_register/120_02_info_register_schedule_insert.js"></script>
+<script src="src/app/html/120_00_info_register/120_03_info_register_notice_mod.js"></script>
+<script src="src/app/html/120_00_info_register/120_04_info_register_notice_insert.js"></script>
+
+<script src="src/app/html/130_00_event_entry/130_00_event_entry.js"></script>
+<script src="src/app/html/130_00_event_entry/130_01_event_entry_teacher_mod.js"></script>
+<script src="src/app/html/130_00_event_entry/130_02_event_entry_teacher_insert.js"></script>
+<script src="src/app/html/130_00_event_entry/130_03_event_entry_entry_mod.js"></script>
+<script src="src/app/html/130_00_event_entry/130_04_event_entry_entry_insert.js"></script>
+
+<script src="src/app/html/140_00_card_register/140_00_card_register.js"></script>
+<script src="src/app/html/140_00_card_register/140_00_card_register_mod.js"></script>
+
+<script src="src/app/html/150_00_manager_login/150_00_manager_login.js"></script>
+<script src="src/app/html/test/test.js"></script>
+
+
+
+
+<!--<script src="vendor/services/dbConnectService.js"></script>-->
+
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,183 @@
+<div class="container" ng-controller="card_register">
+			<!--행사리스트 제목-->
+			<div class="cont-border">
+				<div class="title-wrap">
+					<div class="col-xs-12">
+						<h3>행사리스트</h3>
+					</div>
+				</div>
+				<!--/행사리스트 제목-->
+				<!--행사 리스트-->
+				<div class="col-xs-12">
+					<div class="tabbable" id="tabs-640270">
+						<ul class="nav nav-tabs event-tab" ng-init="tab = 1">
+							<li class="active" ng-class="{active:tab===1}">
+								<a href ng-click="tab = 1">진행 행사</a>
+							</li>
+							<li ng-class="{active:tab===2}">
+								<a href ng-click="tab = 2">지난 행사</a>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+
+							<div class="tab-pane active" ng-show="tab === 1">
+								<div class="fix-height">
+									<table class="table table-hover text-left e-list">
+										<thead>
+										<tr>
+											<td style="width:120px;">시작일자</td>
+											<td style="width:120px;">종료일자</td>
+											<td style="width:414px;">행사명</td>
+											<td>장소</td>
+										</tr>
+										</thead>
+										<tbody ng-repeat="item in item1" >
+										<tr>
+											<td><a href="#" ng-click="cardList(item.event_ID)">{{item.event_start}}</a></td>
+											<td><a href="#" ng-click="cardList(item.event_ID)">{{item.event_end}}</a></td>
+											<td><a href="#" ng-click="cardList(item.event_ID)">{{item.event_name}}</a></td>
+											<td><a href="#" ng-click="cardList(item.event_ID)">{{item.event_location}}</a></td>
+										</tr>
+										<!--<tr>
+                                            <td><a href="#">2015.02.23</a></td>
+                                            <td><a href="#">2015.02.25</a></td>
+                                            <td><a href="#">제 37회 동계학술제</a></td>
+                                            <td><a href="#">메리어트 호텔</a></td>
+                                        </tr>-->
+										</tbody>
+									</table>
+								</div>
+								<ul class="pagination pagination-sm list-pages center-block">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-left"> </i></a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"> </i></a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-pane active"  ng-show="tab === 2">
+								<div class="fix-height">
+									<table class="table table-hover text-left e-list">
+										<thead>
+										<tr>
+											<td style="width:120px;">시작일자</td>
+											<td style="width:120px;">종료일자</td>
+											<td style="width:414px;">행사명</td>
+											<td>장소</td>
+										</tr>
+										</thead>
+										<tbody ng-repeat="item2 in item2">
+										<tr>
+											<td><a href="#" ng-click="cardList(item2.event_ID)">{{item2.event_start}}</a></td>
+											<td><a href="#" ng-click="cardList(item2.event_ID)">{{item2.event_end}}</a></td>
+											<td><a href="#" ng-click="cardList(item2.event_ID)">{{item2.event_name}}</a></td>
+											<td><a href="#" ng-click="cardList(item2.event_ID)">{{item2.event_location}}</a></td>
+										</tr>
+										<!--<tr>
+                                            <td><a href="#">2015.02.23</a></td>
+                                            <td><a href="#">2015.02.25</a></td>
+                                            <td><a href="#">제 37회 동계학술제adfasdffffff</a></td>
+                                            <td><a href="#">메리어트 호텔</a></td>
+                                        </tr>-->
+										</tbody>
+									</table>
+								</div>
+								<ul class="pagination pagination-sm list-pages center-block">
+									<li>
+										<a href="#"><i class="fa fa-angle-double-left"> </i></a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"> </i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!--/ 행사리스트-->
+
+
+	<!--행사상세보기-->
+			<div class="cont-border" ng-if="cardListView==1">
+				<div class="title-wrap">
+					<div class="col-xs-12">
+						<h3>참가자 목록</h3>
+					</div>
+				</div>
+				<!--/행사상세보기-->
+				<!--참가자목록-->
+				<div class="col-xs-12">
+					<div class="col-xs-7">
+						<table class="table table-hover text-left e-list" style="margin-bottom:0; margin-top:0;">
+							<thead>
+								<tr>
+									<td style="width:120px;">참가자 구분</td>
+									<td style="width:85px;">참가자명</td>
+									<td style="width:180px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소속</td>
+									<td style="width:100px;">카드</td>
+								</tr>
+							</thead>
+						</table>
+						<div style="height:210px; overflow-y:scroll;">
+							<table class="table table-hover text-left e-list" style="margin-top:0;">
+								<tbody ng-repeat="item3 in item3">
+									<tr>
+										<td class="kang01" ng-if="item3.user_class_ID==1" style="width:120px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">강연자</a></td>
+										<td ng-if="item3.user_class_ID==2" style="width:120px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">참가자</a></td>
+
+										<td style="width:85px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">&nbsp;&nbsp;{{item3.user_name}}</a></td>
+										<td style="width:180px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">{{item3.user_party}}</a></td>
+
+										<td ng-if="item3.NFC_LID==null" style="width:100px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">카드번호 없음</a></td>
+										<td ng-if="item3.NFC_LID!==null" style="width:100px;"><a href ng-click="cardListClick(item3.event_ID,item3.user_class_ID,item3.user_ID)">{{item3.NFC_LID}}</a></td>
+									</tr>
+									<!--<tr>
+										<td class="kang01"><a href="#">강연자</a></td>
+										<td><a href="#">강문식</a></td>									
+										<td><a href="#">씨아이원</a></td>
+										<td><a href="#">4</a></td>
+									</tr>
+									<tr>
+										<td class="gan02"><a href="#">관리자</a></td>
+										<td><a href="#">강문식</a></td>									
+										<td><a href="#">씨아이원</a></td>
+										<td><a href="#">1</a></td>
+									</tr>
+									<tr>
+										<td><a href="#">참가자</a></td>
+										<td><a href="#">강문식</a></td>									
+										<td><a href="#">씨아이원</a></td>
+										<td><a href="#">1</a></td>
+									</tr>-->
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-xs-5" ng-if="cardModView==1">
+						<div ng-include="'src/app/html/140_00_card_register/140_00_card_register_mod.html'"></div>
+					</div>
+				</div>
+			</div>
+		</div>

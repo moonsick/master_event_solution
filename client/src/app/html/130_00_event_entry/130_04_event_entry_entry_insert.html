@@ -1,0 +1,31 @@
+<form class="form-horizontal form-entry" ng-controller="entryInsertCtr">
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="entryName1" class="control-label">성명</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="entryName1" ng-model="entryName1">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="entryParty1" class="control-label">소속</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="entryParty1" ng-model="entryParty1">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="entryCall1" class="control-label">연락처</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="entryCall1" placeholder="'-' 를 제외하고" ng-model="entryCall1">
+        </div>
+    </div>
+    <div class="pull-right del-sav" style="padding-right:10px;">
+        <button class="btn btn-success" ng-click="entryInsert()">
+            저장
+        </button>
+    </div>
+</form>

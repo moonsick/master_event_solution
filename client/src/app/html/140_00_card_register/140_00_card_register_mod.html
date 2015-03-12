@@ -1,0 +1,38 @@
+<form class="form-horizontal form-entry" ng-controller="cardModCtr">
+    <input class="hidden" ng-model="event_id">
+    <input class="hidden" ng-model="user_class_id">
+    <input class="hidden" ng-model="user_id">
+
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="cardModName" class="control-label">성명</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="cardModName" ng-model="cardModName">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="cardModParty" class="control-label">소속</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="cardModParty" ng-model="cardModParty">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-4 text-center">
+            <label for="cardModNfc" class="control-label">카드</label>
+        </div>
+        <div class="col-xs-7 no-padding">
+            <input type="text" class="form-control input-sm" id="cardModNfc" ng-model="cardModNfc">
+        </div>
+    </div>
+    <div class="pull-right del-sav" style="padding-right:10px;">
+        <button class="btn btn-del">
+            삭제
+        </button>
+        <button class="btn btn-success" ng-click="cardMod()">
+            저장
+        </button>
+    </div>
+</form>

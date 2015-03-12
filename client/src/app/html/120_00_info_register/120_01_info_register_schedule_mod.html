@@ -1,0 +1,47 @@
+<!--<script src="client/src/app/html/120_00_info_register/120_01_info_register_schedule_mod.js"></script>-->
+
+<div ng-controller="schedule_mod">
+    <input class="hidden" ng-model="userId">
+    <input class="hidden" ng-model="scheduleId">
+<form class="form-horizontal" role="form">
+    <div class="col-xs-2">
+        <div class="form-group">
+            <label for="schedule_seq" class="col-xs-6 control-label">순서</label>
+            <div class="col-xs-6 no-padding">
+                <input type="text" class="form-control input-sm" id="schedule_seq" ng-model="schedule_seq"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-5">
+        <div class="form-group">
+            <label for="lecture" class="col-xs-4 control-label">강연제목</label>
+            <div class="col-xs-8 no-padding">
+                <input type="text" class="form-control input-sm" id="lecture" ng-model="lecture"/>
+            </div>
+        </div>
+    </div>
+   <!-- <div class="col-xs-5">
+        <div class="form-group">
+            <label for="teacher_name" class="col-xs-4 control-label">강연자</label>
+            <div class="col-xs-8 no-padding">
+                <select class="form-control input-sm" id="teacher_name" ng-model="teacher_name" ng-click="teacher_list();">
+                    <option value="">강연자를 선택해 주세요</option>
+                    <option value="a">2</option>
+                    <option value="b">3</option>
+                    <option value="c">4</option>
+                    <option value="d">5</option>
+                </select>
+            </div>
+        </div>
+    </div>-->
+</form>
+
+<div class="pull-right del-sav" style="margin-top: 60px;">
+    <button class="btn btn-danger" ng-click="eventScheduleDelete()">
+        삭제
+    </button>
+    <button class="btn btn-success" ng-click="eventScheduleMod()">
+        수정
+    </button>
+</div>
+</div>

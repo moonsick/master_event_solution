@@ -1,0 +1,21 @@
+<div ng-controller="noticeModCtr">
+    <input class="hidden" ng-model="notice_ID">
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <label for="noticeComment" class="control-label">내용</label>
+        </div>
+        <div class="col-xs-10 no-padding">
+            <input type="text" class="form-control input-sm" id="noticeComment" ng-model="noticeComment">
+        </div>
+    </div>
+</form>
+<div class="pull-right del-sav">
+    <button class="btn btn-del" ng-click="noticeDeletgo()">
+        삭제
+    </button>
+    <button class="btn btn-success" ng-click="noticeModGo()">
+        저장
+    </button>
+</div>
+</div>

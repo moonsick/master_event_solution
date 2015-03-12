@@ -1,0 +1,38 @@
+<div ng-controller="scheduleInsertCtrl">
+    <form class="form-horizontal" role="form">
+        <div class="col-xs-2">
+            <div class="form-group">
+                <label for="schedule_seq1" class="col-xs-6 control-label">순서</label>
+                <div class="col-xs-6 no-padding">
+                    <input type="text" class="form-control input-sm" id="schedule_seq1" ng-model="schedule_seq1"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5">
+            <div class="form-group">
+                <label for="lecture1" class="col-xs-4 control-label">강연제목</label>
+                <div class="col-xs-8 no-padding">
+                    <input type="text" class="form-control input-sm" id="lecture1" ng-model="lecture1"/>
+                </div>
+            </div>
+        </div>
+      <!--  <div class="col-xs-5">
+            <div class="form-group">
+                <label for="teacher_name1" class="col-xs-4 control-label">강연자</label>
+                <div class="col-xs-8 no-padding">
+                    <select class="form-control input-sm" id="teacher_name1" ng-model="teacher_name1" ng-click="teacher_list1();">
+                        <option value="">강연자를 선택해 주세요</option>
+                        <option value="a">aaaaaa</option>
+                    </select>
+                </div>
+            </div>
+        </div>-->
+    </form>
+
+    <div class="pull-right del-sav" style="margin-top: 60px;">
+        <button class="btn btn-success" ng-click="eventScheduleInsert()">
+            저장
+        </button>
+    </div>
+</div>
+

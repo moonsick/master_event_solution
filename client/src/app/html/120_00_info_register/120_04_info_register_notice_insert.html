@@ -1,0 +1,17 @@
+<div ng-controller="noticeInsertCtr">
+<form class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-2">
+            <label for="noticeComment1" class="control-label">내용</label>
+        </div>
+        <div class="col-xs-10 no-padding">
+            <input type="text" class="form-control input-sm" id="noticeComment1" ng-model="noticeComment1">
+        </div>
+    </div>
+</form>
+<div class="pull-right del-sav">
+    <button class="btn btn-success" ng-click="noticeInsertGo()">
+        저장
+    </button>
+</div>
+</div>

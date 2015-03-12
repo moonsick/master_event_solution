@@ -1,0 +1,56 @@
+<div ng-controller="event_register_insert">
+    <div class="title-wrap">
+        <div class="col-xs-12">
+            <h3>행사 상세보기</h3>
+        </div>
+    </div>
+    <!--/행사상세보기-->
+    <!--행사상세보기-->
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table no-border input-tb">
+                <tr>
+                    <th>행사명</th><td style="width:40%;">
+                    <input type="text" class="form-control" ng-model="event_name">
+                </td>
+                    <th>장소</th><td>
+                    <input type="text" class="form-control" ng-model="event_location">
+                </td>
+                </tr>
+                <tr>
+                    <th>행사주관사</th><td>
+                    <input type="text" class="form-control" ng-model="event_company">
+                </td>
+                    <th>행사기간</th>
+                    <td>
+                        <div class="col-xs-5 no-padding input-group">
+                            <input type="text" class="form-control" placeholder="예)2015-01-01" style="padding-left: 5px; padding-right: 0px;" ng-model="event_start">
+									<span class="input-group-btn">
+										<button class="btn btn-date" type="button">
+                                            <i class="fa fa-calendar"> </i>
+                                        </button> </span>
+                        </div>
+                        <div class="col-xs-2 text-center" style="margin-top:8px;">
+                            ~
+                        </div>
+                        <div class="col-xs-5 no-padding input-group">
+                            <input type="text" class="form-control" placeholder="예)2015-01-01" style="padding-left: 5px; padding-right: 0px;" ng-model="event_end">
+									<span class="input-group-btn">
+										<button class="btn btn-date" type="button">
+                                            <i class="fa fa-calendar"> </i>
+                                        </button> </span>
+                        </div></td>
+                </tr>
+                <tr>
+                    <th style="vertical-align: top;">설명</th>
+                    <td colspan="3"><textarea class="form-control" rows="5" ng-model="event_commnet"> </textarea></td>
+                </tr>
+            </table>
+            <div class="pull-right del-sav">
+                <button class="btn btn-success" ng-click="new_event_insert()">
+                    저장
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
